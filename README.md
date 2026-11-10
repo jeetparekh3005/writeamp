@@ -7,8 +7,14 @@
 
 Read it as a site: <https://writeamp.com/>
 
-A working notebook on software architecture: patterns, algorithms, and the design of
-scalable systems, with real-world case studies and the trade-offs behind every decision.
+WriteAmp is the working notebook of a technical architect, written after more than a
+decade of building, scaling, and optimizing distributed systems. The core of it is a
+single idea: the discipline we built for distributed systems over the last twenty years
+(idempotency, backpressure, failure taxonomies, consensus) applies directly to the AI
+systems everyone is now rushing into production, and almost nobody is applying it.
+
+This is for senior engineers and architects, and the people on their way there. The
+writing assumes you have shipped things and watched them fail.
 
 It spans the full altitude of architectural thinking, from code-level patterns to
 distributed and adversarial systems, alongside the practice of it: a system-design
