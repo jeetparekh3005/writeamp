@@ -11,7 +11,7 @@ A working notebook on software architecture: patterns, algorithms, and the desig
 scalable systems, with real-world case studies and the trade-offs behind every decision.
 
 It spans the full altitude of architectural thinking, from code-level patterns to
-distributed and decentralized systems, alongside the practice of it: a system-design
+distributed and adversarial systems, alongside the practice of it: a system-design
 methodology, real-world case studies (each ending in *what to steal, what to avoid*),
 cross-cutting concerns, and a decision log. It grows with whatever I'm building.
 
@@ -19,16 +19,23 @@ cross-cutting concerns, and a decision log. It grows with whatever I'm building.
 
 | Area | What lives here |
 |------|-----------------|
-| [Foundations](./foundations) | Theory: [data systems](./foundations/data-systems), [distributed systems](./foundations/distributed-systems), [decentralized systems](./foundations/decentralized-systems) (DLTs, blockchain, BFT) |
+| [Foundations](./foundations) | Theory: [data systems](./foundations/data-systems), [distributed systems](./foundations/distributed-systems), [adversarial & Byzantine systems](./foundations/adversarial-systems) (BFT, trust boundaries, verification) |
 | [Patterns](./patterns) | Three altitudes: [code](./patterns/code) (GoF), [architectural](./patterns/architectural) (CQRS, saga, hexagonal), [distributed](./patterns/distributed) (outbox, idempotency) |
 | [Algorithms](./algorithms) | The toolbox: consistent hashing, bloom filters, HyperLogLog, CRDTs, merkle trees, consensus |
 | [System Design](./system-design) | The method: estimation, component catalog, how to approach any design |
-| [AI Systems](./ai-systems) | RAG, agents, extraction, agentic data, rules, LLMOps, AI patterns |
+| [AI Systems](./ai-systems) | RAG, agents, extraction, agentic data, rules, LLMOps, AI architectures |
 | [Case Studies](./case-studies) | Architecture teardowns of real systems, each ending in *steal / avoid* |
 | [Cross-Cutting](./cross-cutting) | Reliability, observability, security, performance, cost |
 | [Decisions](./decisions) | ADR log and *X vs Y, when and why* trade-off frameworks |
 | [Engineering Leadership](./engineering-leadership) | Conway's law, team topologies, migration playbooks |
 | [Reading](./reading) | Companions that index into the topic folders (e.g. [DDIA](./reading/ddia.md)) |
+
+## How to read this notebook
+
+- **Came from an article?** Start at the notebook page it links, then follow the ladder down.
+- **Shipping AI to production?** Start at [AI Systems](./ai-systems) and follow the evals and verification thread into [Foundations](./foundations).
+- **Studying for depth?** Start at the foundations spine: the log, how systems fail, time.
+- **Designing something now?** Start at [System Design](./system-design) and follow the component and decision links.
 
 ## How it's organized
 
@@ -44,7 +51,9 @@ indexes that link into the topic folders, so every concept has exactly one home.
 
 ## Conventions
 
-- One concept per file; link related notes liberally.
+- One concept per file, one home per concept; every other mention links to the home.
+- Every page opens by placing itself on the altitude ladder: article (story) > pattern (recipe) > foundation (theory) > algorithm (structure).
+- Living pages carry a "last compacted" date; articles are dated and never retroactively edited.
 - Every case study ends with a **Steal / Avoid** section ([template](./case-studies/_template.md)).
 - Every non-trivial choice gets an ADR in [`decisions/`](./decisions) ([template](./decisions/_template.md)).
 - Diagrams are generated, not hand-drawn (see below), and referenced, not inlined.
@@ -59,9 +68,11 @@ of a system into a spec and builds it.
 
 ## Roadmap
 
-Depth over breadth, one node at a time: foundations (replication, consensus) and the core
-algorithms first, then the system-design method and a first product teardown, then AI
-systems. Decisions and cross-cutting fill in as real trade-offs come up.
+Depth over breadth, one node at a time. The primary workstream is the transfer-list
+series in [`patterns/distributed/`](./patterns/distributed): each installment ships an
+article, a pattern page, and a Gotham S&L incident. Foundations, algorithms, and
+decisions pages are written when an installment needs to link to them, spine first.
+Case studies follow the log thread: Cassandra, then Kafka, then the AI group.
 
 ---
 

@@ -4,11 +4,13 @@ Architecture teardowns of real systems - where theory meets reality. Every study
 the [template](./_template.md) and ends with a **Steal / Avoid** section; that footer is
 the line between a teardown and an architect's note.
 
-- [`products/`](./products) - Uber (geospatial + dispatch), Slack (WebSocket fan-out), Telegram (multi-DC sync), Netflix, Discord, Stripe
-- [`databases/`](./databases) - Spanner, Cassandra, DynamoDB, CockroachDB
-- [`streaming/`](./streaming) - Kafka, Flink, Pulsar
-- [`chains/`](./chains) - Bitcoin, Ethereum, a modern L2
-- [`ai/`](./ai) - Perplexity, Cursor, Harvey, Copilot
+Sequenced by what each study feeds:
+
+1. [`databases/`](./databases) - Cassandra first (feeds the log thread), then Spanner, DynamoDB, CockroachDB
+2. [`streaming/`](./streaming) - Kafka next (feeds the log thread), then Flink, Pulsar
+3. [`ai/`](./ai) - Harvey first (a regulated-industry AI teardown), then Perplexity, Cursor, Copilot
+4. [`adversarial/`](./adversarial) - Byzantine systems at production scale; deferred until the adversarial foundations pages exist
+5. [`products/`](./products) - Uber, Slack, Telegram, Netflix, Discord, Stripe; deferred
 
 Each study links back into the primitives it uses (for example
 [consistent hashing](../algorithms/consistent-hashing.md)) so the notebook reads as one

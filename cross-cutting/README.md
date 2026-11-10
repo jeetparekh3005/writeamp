@@ -11,4 +11,4 @@ Planned:
 - [ ] **Security** - authn/authz, secrets, defense in depth, threat modeling
 - [ ] **Performance** - latency budgets, tail latency, caching strategy, profiling
 - [ ] **Cost** - the fourth axis; cost/request, build-vs-buy economics
-- [ ] **AI-native NFRs** - eval & regression, hallucination/grounding, token cost, prompt-injection, non-determinism
+- [ ] **AI-native NFRs** - the operational view; eval & regression point at the [evals anchor](../ai-systems/llmops/README.md), grounding, token cost, prompt-injection, non-determinism

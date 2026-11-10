@@ -11,4 +11,4 @@ Planned:
 - [ ] Reranking
 - [x] Evaluation
 - [ ] Query transformation
-- [ ] Caching
+- [ ] Caching and index freshness (a stale index is a cache invalidation problem)

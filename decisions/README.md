@@ -1,5 +1,9 @@
 # Decisions
 
+Two genres live here: evergreen choosing frameworks (below), and dated ADRs for this
+notebook's own stack (one file per decision, via the template). Frameworks get
+re-compacted; ADRs never change.
+
 Where *judgment* is stored. Two kinds of note:
 
 1. **ADRs** - records of specific decisions, numbered `ADR-NNNN`, using the

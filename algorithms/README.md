@@ -10,12 +10,13 @@ Planned:
 - [ ] Bloom filter · Counting bloom
 - [ ] HyperLogLog (cardinality) · Count-min sketch (frequency)
 - [ ] Merkle trees (anti-entropy, verification)
-- [ ] CRDTs (conflict-free replicated data types)
+- [ ] CRDTs (conflict-free replicated data types; semilattice sidebar: why CRDTs cannot disagree)
 - [ ] Vector clocks / Lamport timestamps
-- [ ] Raft / Paxos (consensus) - theory in [`../foundations/distributed-systems`](../foundations/distributed-systems)
+- [ ] Raft / Paxos / PBFT (consensus) - theory in [`../foundations/distributed-systems`](../foundations/distributed-systems)
 - [ ] Gossip / SWIM (membership)
 - [ ] Token bucket vs leaky bucket (rate limiting)
-- [ ] LSM-tree vs B-tree
+- [ ] LSM-tree and B-tree mechanics (the why lives in [`../foundations/data-systems`](../foundations/data-systems))
 - [ ] Quorum (R + W > N)
 - [ ] Geohashing / H3
 - [ ] Reservoir sampling
+- [ ] Hashes and signatures: what they actually guarantee

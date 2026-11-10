@@ -1,8 +1,8 @@
 title: Case Studies
 nav:
   - README.md
-  - products
   - databases
   - streaming
-  - chains
   - ai
+  - adversarial
+  - products
